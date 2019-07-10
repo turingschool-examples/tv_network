@@ -22,6 +22,7 @@ class Network
     key_actors = @shows.map(&:characters)
     .flatten
     .map(&:actor)
+    
     value_salary = @shows.map(&:characters)
     .flatten
     .map(&:salary)
