@@ -7,4 +7,9 @@ class Network
     @name = name
     @shows = []
   end
+
+  def add_show(show_name)
+    @shows << show_name
+  end
+
 end
