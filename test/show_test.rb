@@ -23,4 +23,8 @@ knight_rider = Show.new("Knight Rider", "Glen Larson", [@michael_knight, @kitt])
   def test_creator_has_name
     assert_equal "Glen Larson", @knight_rider.creator
   end
+
+  def test_characters_exists
+    assert_instance_of Show, @knight_rider.characters
+  end
 end
