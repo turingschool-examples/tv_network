@@ -9,10 +9,9 @@ class Show
   end
 
   def total_salary
-    @characters.each do |character|
-      @total_salary += character.salary
+    @characters.sum do |character|
+      character.salary
     end
-    @total_salary
   end
 
 end

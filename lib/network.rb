@@ -7,34 +7,42 @@ class Network
   end
 
   def add_show(show)
-
     @shows << show
   end
 
   def highest_paid_actor
-    @highest_salary = 0
-    @highest_salary_name = ""
-    #maybe use sort_by or max
+    highest_salary_name = ""
     @shows.each do |show|
-      show.characters.each do |character|
-        if character.salary > @highest_salary
-          @highest_salary = character.salary
-          @highest_salary_name = character.actor
-        end
+      highest_salary_name = show.characters.max_by do |character|
+          character.salary
       end
     end
-    @highest_salary_name
+    highest_salary_name.actor
+
+    # highest_salary = 0
+    # highest_salary_name = ""
+    # #maybe use sort_by or max
+    # @shows.each do |show|
+    #   show.characters.each do |character|
+    #     if character.salary > highest_salary
+    #       highest_salary = character.salary
+    #       highest_salary_name = character.actor
+    #     end
+    #   end
+    # end
+    # highest_salary_name
+
   end
 
   def payroll
-    @payroll = {}
+    payroll_hash = {}
 
     @shows.each do |show|
       show.characters.each do |character|
-        @payroll[character.actor] = character.salary
+        payroll_hash[character.actor] = character.salary
       end
     end
-    @payroll
+    payroll_hash
   end
 
 end
