@@ -13,9 +13,9 @@ class CharacterTest < Minitest::Test
   end
 
   def test_attributes
-    assert_equal @kitt.name, "KITT"
-    assert_equal @kitt.actor, "William Daniels"
-    assert_equal @kitt.salary, 1000000
+    assert_equal "KITT", @kitt.name
+    assert_equal "William Daniels", @kitt.actor
+    assert_equal 1000000, @kitt.salary
   end
 
 end
