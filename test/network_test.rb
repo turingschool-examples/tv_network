@@ -56,5 +56,4 @@ class ShowTest < Minitest::Test
     }
     assert_equal expected, @nbc.payroll
   end
-
-  end
+end

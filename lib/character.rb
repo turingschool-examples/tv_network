@@ -6,5 +6,4 @@ class Character
       instance_variable_set("@#{key}", val)
     end
   end
-  
 end
