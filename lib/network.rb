@@ -23,5 +23,15 @@ end
   highest_paid_actor_object.actor
 end
 
+def payroll
+  payroll = {}
+  @shows.map do |show|
+    show.characters.each do |character|
+      payroll[character.actor] = character.salary
+    end
+  end
+  payroll
+end
+
 
 end
