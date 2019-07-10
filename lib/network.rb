@@ -1,3 +1,4 @@
+require 'pry'
 class Network
   attr_reader :network_name, :network_shows
   def initialize(network_name)
@@ -10,6 +11,10 @@ class Network
   end
 
   def highest_paid_person
-    
+    characters = []
+    @network_shows.each do |character|
+          characters.push character
+          binding.pry
+        end
   end
 end #class
