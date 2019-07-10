@@ -32,6 +32,13 @@ class ShowTest < Minitest::Test
     assert_instance_of Show, @nbc.shows.first
   end
 
+  def test_all_characters
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    assert_equal 4 ,@nbc.all_characters.length
+    assert_instance_of Character, @nbc.all_characters.first
+  end
+
   def test_highest_paid_actor
     @nbc.add_show(@knight_rider)
     @nbc.add_show(@parks_and_rec)
