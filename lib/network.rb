@@ -17,19 +17,18 @@ attr_reader :name, :shows
         characters_in_shows << character
       end
     end
-    highest_paid_actor_object =                          characters_in_shows.max_by do |character|    character.salary
-    end
+    highest_paid_actor_object =                          characters_in_shows.max_by {|character| character.salary}
     highest_paid_actor_object.actor
   end
 
   def payroll
     payroll = {}
-    @shows.map do |show|
+    @shows.each do |show|
       show.characters.each do |character|
         payroll[character.actor] = character.salary
       end
     end
     payroll
   end
-  
+
 end
