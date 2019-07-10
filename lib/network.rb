@@ -14,4 +14,13 @@ class Network
     highest = characters.max_by {|character| character.salary}
     highest.actor
   end
+
+  def payroll
+    salaries = {}
+    characters = @shows.map {|show| show.characters}.flatten
+    characters.each do |character|
+      salaries[character.actor] = character.salary
+    end
+    salaries
+  end
 end
