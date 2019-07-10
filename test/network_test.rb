@@ -30,8 +30,17 @@ class NetworkTest < MiniTest::Test
 
   def test_add_show
     @nbc.add_show(@knight_rider)
-    @nbc.add_show(@parks_and_rec) 
+    @nbc.add_show(@parks_and_rec)
 
     assert_equal [@knight_rider, @parks_and_rec], @nbc.shows
+  end
+
+  def test_payroll
+    skip
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    @payroll_hash = {"David Hasselhoff" => 1600000, "William Daniels" => 1000000, "Amy Poehler" => 2000000, "Nick Offerman" => 1400000}
+  
+    assert_equal @payroll, @nbc.payroll
   end
 end
