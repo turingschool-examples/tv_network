@@ -7,17 +7,10 @@ class Show
     @name = name
     @creator = creator
     @characters = character
-    #passing in all 'character' objects as an array.
   end
 
-  # def add_characters
-  #   a = []
-  #   a << Character.new
-  #   a
-  # end
-
-  # def total_salary
-  #   characters.do each {|character| character.salary + }
-  # end
+  def total_salary
+    characters.sum {|character| character.salary}
+  end
 
 end
