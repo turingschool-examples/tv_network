@@ -20,6 +20,10 @@ class Network
       highest_paid = characters.max_by do |character|
         character.salary
     end
-    p highest_paid.actor
+     highest_paid.actor
+  end
+
+  def payroll
+
   end
 end
