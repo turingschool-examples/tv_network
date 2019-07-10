@@ -14,6 +14,4 @@ class CharacterTest < Minitest::Test
     assert_equal 1000000, kitt.salary
   end
 
-
-
 end
