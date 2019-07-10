@@ -7,10 +7,6 @@ class Show
     @characters = characters
   end
 
-  def add_character(character)
-    @characters << character
-  end
-
   def total_salary
     @characters.sum do |character|
       character.salary

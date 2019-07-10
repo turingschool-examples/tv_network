@@ -23,6 +23,8 @@ class NetworkTest < Minitest::Test
   def test_network_attributes
     assert_equal "NBC", @nbc.name
     assert_equal [], @nbc.shows
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
     assert_equal "Amy Poehler", @nbc.highest_paid_actor
   end
 
