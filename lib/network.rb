@@ -12,15 +12,15 @@ class Network
   end
 
   def highest_paid_actor
-    character_collection = @shows.map do |show|
+    highest_paid_per_show = @shows.map do |show|
       show.characters.max_by do |character|
         character.salary
       end
     end
-      highest_paid = character_collection.max_by do |character|
-        character.salary
+    highest_paid_of_network = highest_paid_per_show.max_by do |character|
+      character.salary
     end
-     highest_paid.actor
+     highest_paid_of_network.actor
   end
 
   def payroll
