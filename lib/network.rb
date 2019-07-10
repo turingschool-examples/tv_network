@@ -18,20 +18,6 @@ class Network
       end
     end
     highest_salary_name.actor
-
-    # highest_salary = 0
-    # highest_salary_name = ""
-    # #maybe use sort_by or max
-    # @shows.each do |show|
-    #   show.characters.each do |character|
-    #     if character.salary > highest_salary
-    #       highest_salary = character.salary
-    #       highest_salary_name = character.actor
-    #     end
-    #   end
-    # end
-    # highest_salary_name
-
   end
 
   def payroll
