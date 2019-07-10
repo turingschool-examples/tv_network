@@ -17,7 +17,8 @@ attr_reader :name, :shows
         characters_in_shows << character
       end
     end
-    highest_paid_actor_object =                          characters_in_shows.max_by {|character| character.salary}
+    highest_paid_actor_object =
+    characters_in_shows.max_by {|character| character.salary}
     highest_paid_actor_object.actor
   end
 
