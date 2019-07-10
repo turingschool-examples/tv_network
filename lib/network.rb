@@ -13,11 +13,13 @@ class Network
   end
 
   def payroll
-    #needs to return the character name and salaray in a hash
+    #needs to return the character name and salary in a hash
+
     # name_salary = {}
     # @shows.each {|k,v| name_salary << v.salary}
     # name_salary
 
+   # what does the current arrays look like?
    #  [#<Character:0x007f8e8d943ba8 @actor="David Hasselhoff", @name="Michael Knight", @salary=1600000>,
    #  #<Character:0x007f8e8d943a90 @actor="William Daniels", @name="KITT", @salary=1000000>]
    # [7] pry(#<NetworkTest>)> @nbc.shows[0].characters[0]
