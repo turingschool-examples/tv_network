@@ -11,16 +11,16 @@ def add_show(show)
 end
 
 def highest_paid_actor
-characters_in_shows =
-shows.each {|show|
-  characters_in_shows.push(show.characters)}
-  characters_in_shows.max_by {|character| character.salary}
+characters_in_shows = []
+@shows.map do |show|
+  show.characters.each do |character|
+  characters_in_shows << character
+  end
 end
-  # @shows.max_by do |show|
-  #   show.characters.max_by do |character|
-  #   character.salary
-  # end
-  # end
+  highest_paid_actor_object = characters_in_shows.max_by do |character| character.salary
+  end
+
+  highest_paid_actor_object.actor
 end
 
 
