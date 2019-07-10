@@ -18,12 +18,11 @@ class Network
 
   def highest_paid_actor
     all_characters = []
-    @shows.find_all do |show|
+    @shows.each do |show|
       all_characters << show.characters
     end
-    highest_paid_character = 
-    all_characters.flatten.max_by do |character|
-      highest_paid_character = character.salary
+    highest_paid_character = all_characters.flatten.max_by do |character|
+      character.salary
     end
     highest_paid_character.actor
   end
