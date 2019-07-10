@@ -24,8 +24,5 @@ class CharacterTest < Minitest::Test
   def test_it_has_a_salary
     assert_equal 1000000, @kitt.salary
   end
-
-
-
-
+  
 end
