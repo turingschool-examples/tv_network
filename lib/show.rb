@@ -9,6 +9,8 @@ class Show
   end
 
   def total_salary
-    @characters.map(&:salary).sum
+    @characters.map(&:salary)
+    .map(&:to_i) # in case salary is in string
+    .sum
   end
 end
