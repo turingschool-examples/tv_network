@@ -26,4 +26,14 @@ class Network
     end
     highest_paid_character.actor
   end
+
+  def payroll
+    payroll = Hash.new
+    @shows.each do |show|
+      show.characters.each do |char|
+        payroll[char.actor] = char.salary
+      end
+    end
+    payroll
+  end
 end
