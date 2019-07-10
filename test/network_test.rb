@@ -26,6 +26,7 @@ class NetworkTest < Minitest::Test
     @nbc.add_show(@knight_rider)
     @nbc.add_show(@parks_and_rec)
     assert_equal "Amy Poehler", @nbc.highest_paid_actor
+    assert @nbc.payroll
   end
 
   def test_it_can_add_shows

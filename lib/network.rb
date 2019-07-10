@@ -23,5 +23,24 @@ class Network
     char.actor
   end
 
+  def payroll
+    show_characters = []
+    @shows.each do |show|
+      show_characters << show.characters
+    end
+
+    char_salary = []
+    show_characters.flatten.each do |character|
+      char_salary << character.salary
+    end
+
+    char_actor = []
+    show_characters.flatten.each do |character|
+      char_actor << character.actor
+    end
+
+    payroll = {char_actor: char_salary}
+
+  end
 
 end
