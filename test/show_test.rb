@@ -18,11 +18,7 @@ class ShowTest < Minitest::Test
   def test_show_attributes
     assert_equal "Knight Rider", @knight_rider.name
     assert_equal "Glen Larson", @knight_rider.creator
-
-    @knight_rider.add_character(@michael_knight)
-    @knight_rider.add_character(@kitt)
     assert_equal [@michael_knight, @kitt], @knight_rider.characters
-
     assert_equal 2600000, @knight_rider.total_salary
   end
 
