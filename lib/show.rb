@@ -8,7 +8,14 @@ class Show
     @name = name
     @creator = creator
     @characters = characters
+    @salary_total = 0
   end
 
+  def total_salary
+    @characters.each do |character|
+      @salary_total += character.salary
+    end
+    @salary_total
+  end
 
 end
